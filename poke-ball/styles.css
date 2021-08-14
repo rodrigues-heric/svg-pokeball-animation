@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #22303c;
+}
+
+#pokeball {
+    transform: scale(2);
+}
+
+#poke {
+    animation: poke 4s infinite;
+    transform-origin: center;
+}
+
+#inner {
+    animation: inner 0.5s infinite alternate;
+}
+
+@keyframes poke {
+    0% {
+        transform: translateX(0%) rotateZ(0deg);
+    }
+    5% {
+        transform: translateX(5%) rotateZ(30deg);
+    }
+    10% {
+        transform: translateX(-5%) rotateZ(-30deg);
+    }
+    20%, 100% {
+        transform: translateX(0%) rotateZ(0deg);
+    }
+}
+
+@keyframes inner {
+    from {
+        fill: black;
+    }
+    to {
+        fill: red;
+    }
+}
